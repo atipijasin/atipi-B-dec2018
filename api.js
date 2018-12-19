@@ -12,10 +12,14 @@ const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
     res.json({status: 'ok'})
-})
+});
+
+app.get('/bimbumbam', (req, res) => {
+    const numero = Math.ceil(Math.random() * 5);
+    res.json({ result: numero });
+});
 
 
-
-app.listen(PORT, () => console.log('Example app listening on port'+ PORT))
+app.listen(PORT, () => console.log('Exam app listening on port '+ PORT))
 
 
